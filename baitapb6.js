@@ -24,6 +24,13 @@ function tinh() {
 function tinhSn() {
   var x = document.getElementById("SoX").value * 1;
   var n = document.getElementById("SoN").value * 1;
+  var s = 0;
+  for (var i = 0; i <= n; i++) {
+    s += Math.pow(x, i);
+  }
+
+  var result = "<p> Đáp án :" + s + "</p>";
+  document.getElementById("infonb2").innerHTML = result;
 }
 
 // bài 3. tính giai thừa
@@ -37,4 +44,13 @@ function tinhGiaiThua() {
     start++;
   }
   console.log(tinh);
+}
+//bài 4 : tạo DIV
+
+function taoDiv() {
+  for (var i = 0; i <= 10; i++) {
+    if (i % 2 === 0) {
+      document.createElement("div");
+    }
+  }
 }
